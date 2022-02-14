@@ -1,25 +1,22 @@
 import csvtojson from 'csvtojson'
 import path from 'path'
-
+import fs from 'fs'
 class Csv {
-  constructor(ruta) {
-    this.ruta = ruta
-    this.relative = '../../'
-  }
+  constructor() {}
 
-  async csvtojson({ file }) {
-    return new Promise((resolve, reject) => {
+  csvtojson({ file }) {
+    return new Promise(async (resolve, reject) => {
       try {
         const rutaFile = path.join(
           __dirname,
-          this.relative,
-          this.ruta,
+          '../../',
+          'public/uploads',
           file
         )
+
         let dataJON = []
-        const readStream =
-          require('fs').createReadStream(rutaFile)
-        csvtojson({
+        const readStream = fs.createReadStream(rutaFile)
+        await csvtojson({
           delimiter: '|',
           checkColumn: false,
           noheader: false,
@@ -27,9 +24,17 @@ class Csv {
           trim: true,
           defaultEncoding: 'utf8',
           output: 'json',
-          downstreamFormat: 'json'
+          downstreamFormat: 'json',
+          workerNum: 2
         })
           .preFileLine((fileLine, idx) => {
+            let invalidLinePattern = /^['"].*[^"']/
+            if (invalidLinePattern.test(fileLine)) {
+              throw new Error(
+                `datos invalidos en la linea ${idx} campo: ${fileLine}`
+              )
+            }
+
             if (idx === 0) {
               return fileLine.toLowerCase()
             }
@@ -37,18 +42,18 @@ class Csv {
           })
           .fromStream(readStream)
           .subscribe(
-            (json) => {
+            (json, lineNumber) => {
               dataJON.push(json)
             },
-            () => {
-              reject()
+            (err) => {
+              reject(err)
             },
             () => {
               resolve(dataJON)
             }
           )
       } catch (error) {
-        throw error
+        reject(error)
       }
     })
   }

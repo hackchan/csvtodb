@@ -2,17 +2,16 @@ import fs from 'fs/promises'
 import path from 'path'
 
 class File {
-  constructor(ruta) {
-    this.ruta = ruta
-    this.relative = '../../'
+  constructor(path = '../../') {
+    this.path = path
   }
 
   async readFile({ encode = 'latin1', file }) {
     try {
       const rutaFile = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         file
       )
       return await fs.readFile(rutaFile, encode)
@@ -25,8 +24,8 @@ class File {
     try {
       const rutaFile = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         file
       )
       await fs.unlink(rutaFile)
@@ -39,14 +38,14 @@ class File {
     try {
       const rutaFile = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         file
       )
       const rutaRenameFile = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         renameFile
       )
       await fs.rename(rutaFile, rutaRenameFile)
@@ -59,8 +58,8 @@ class File {
     try {
       const rutaFile = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         file
       )
       await fs.appendFile(rutaFile, `\n${texto}`)
@@ -73,14 +72,14 @@ class File {
     try {
       const rutaFile = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         file
       )
       const rutaFileDestino = path.join(
         __dirname,
-        this.relative,
-        this.ruta,
+        this.path,
+        'public/uploads',
         fileDestino
       )
       await fs

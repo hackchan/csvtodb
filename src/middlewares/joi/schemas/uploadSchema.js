@@ -1,7 +1,7 @@
 const Joi = require('joi')
 
-const file = Joi.any().required()
+const fieldname = Joi.string().required()
 
 export const uploadschema = Joi.object({
-  file
+  fieldname
 })

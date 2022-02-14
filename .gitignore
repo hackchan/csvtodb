@@ -127,3 +127,7 @@ dist
 .pnp.*
 
 postgres_data
+
+# Ignore files
+*.pdf
+*.csv
