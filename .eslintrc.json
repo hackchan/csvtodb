@@ -1,0 +1,17 @@
+{
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true,
+      "ecmaVersion": 2020
+    },
+    "extends": ["eslint:recommended", "prettier"],
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-useless-catch": "off"
+    }
+  }
