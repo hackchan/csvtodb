@@ -1,0 +1,2023 @@
+{
+  "ejecucionIngreso": {
+    "anio_reporte": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad_reportante": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad_reportante": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "codigo_presupuestal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+    "nombre_rubro": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos, solo letras y espacios"
+    },
+    "presupuesto_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "adiciones_del_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "adiciones_acumuladas": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "reducciones_del_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "reducciones_acumuladas": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "apropiacion_definitiva": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "reconocimientos_del_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "reconocimientos_acumulados": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "recaudos_del_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "recaudos_acumulados": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "fecha_reporte": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    }
+  },
+
+  "relacionIngreso": {
+    "anio_reporte": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad_reportante": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad_reportante": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "codigo_presupuestal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+
+    "fecha_de_recaudo": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(AAAA-MM-DD) Día de dos dígitos, mes de dos dígitos y año de cuatro dígitos separados por -, sin dígitos de hora o símbolos diferentes a -"
+    },
+    "numero_recibo": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos"
+    },
+    "numero_reconocimiento": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos"
+    },
+    "numero_identificacion_tercero": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_tercero": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "concepto_recaudo": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "valor": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "cuenta_bancaria_dest": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos"
+    },
+    "nombre_banco": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "no_cuenta_banco_orig": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos"
+    },
+    "cta_contable": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos."
+    }
+  },
+
+  "ejecucionGastos": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "cod_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "fuente_financiacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "nombre_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+
+    "apropiacion_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "adiciones_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "adiciones_acumuladas": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "reducciones_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "reducciones_acumuladas": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "contracreditos_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "contracreditos_acumulados": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "apropiacion_definitiva": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "aplazamientos": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "desaplazamientos": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "cdps_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "cdps_acumulado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "compromisos_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "compromisos_acumulado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "obligaciones_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "obligaciones_acumulado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "pagos_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "pagos_acumulado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "saldo_disponible": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "porcentaje_ejecucion": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores decimales entre 0 y 9, Decimales separados por coma ',' un valor valido sería 0,88"
+    },
+
+    "fecha_reporte": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    }
+  },
+
+  "relacioncdps": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "nit": true,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "cod_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "fuente_financiacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "nombre_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+
+    "numero_cdp": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "fecha_cdp": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "valor_cdp": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "detalle_cdp": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras, espacios o numeros"
+    }
+  },
+
+  "relacioncompromiso": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "cod_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "fuente_financiacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+    "nombre_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+
+    "numero_compromiso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Año seguido del consecutivo propio de cada entidad"
+    },
+    "fecha_compromiso": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "numero_cdp": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+    "fecha_cdp": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "valor_compromiso": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "numero_identificacion_beneficiario": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+
+    "nombre_beneficiario": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "detalle_compromiso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+    "tipo_compromiso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Contrato", "Transferencia", "Giro"],
+      "message": "Debe contener alguna de las opciones:Contrato, Transferencia o Giro manteniendo la mayúscula inicial sin espacios o símbolos adicionales"
+    },
+    "valor_obligaciones": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "valor_pagado_neto": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+    "tipo_gasto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": [
+        "Funcionamiento",
+        "Inversion",
+        "Servicio a la deuda publica"
+      ],
+      "message": "Debe contener alguna de las opciones:Funcionamiento, Inversión Servicio a la deuda pública, manteniendo la mayúscula inicial espacios entre palabras y sin espacios al inicio o al final, tampoco símbolos"
+    }
+  },
+
+  "relacionObligaciones": {
+    "anio_reporte": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad_reportante": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "codigo_presupuestal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Separador (.), sin otros símbolos o caracteres"
+    },
+
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+
+    "nombre_rubro": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Debe contener alguna de las opciones:Contrato, Transferencia o Giro manteniendo la mayúscula inicial sin espacios o símbolos adicionales"
+    },
+    "numero_de_obligacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Número alfanumerico sin símbolos"
+    },
+    "fecha_de_obligacion": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+    "numero_compromiso": {
+      "tipo": "String",
+      "coma": true,
+      "valid": 0,
+      "message": "Año seguido del consecutivo propio de cada entidad"
+    },
+    "fecha_compromiso": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+    "valor_obligacion": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "identificacion_beneficiario": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas"
+    },
+
+    "nombre_beneficiario": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "detalle_compromiso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    }
+  },
+
+  "relacionPagos": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "vigencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["Actual", "Reservas", "CxP"],
+      "message": "Los valores deben aparecer sin espacios y con las mismas caracteristicas de mayúsculas y minúsculas, sin comillas, los valores validos son: Actual Reservas CxP"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "cod_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Adjuntar descripción detallada de la notación de codigo utilizado"
+    },
+    "fuente_financiacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al catalogo vigente"
+    },
+    "nombre_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras, espacios o numeros, detalle de como esta definida la información en este campo"
+    },
+
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    },
+
+    "situacion_de_fondos": {
+      "tipo": "String",
+      "valid": ["C", "S", "N/A"],
+      "message": "Solo el caracter C, S o N/A en mayúscula, sin símbolos o caracteres diferentes"
+    },
+
+    "numero_egreso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "fecha_egreso": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "numero_obligacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+    "fecha_obligacion": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+    "valor_egreso_presupuestal": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "descuentos": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "neto_pagado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros en pesos más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos"
+    },
+
+    "banco": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas"
+    },
+
+    "no_cuenta": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas"
+    },
+
+    "identificacion_beneficiario": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas"
+    },
+
+    "nombre_beneficiario": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "detalle_egreso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    }
+  },
+
+  "auxliarSaldos": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "fecha": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+    "comprobante": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+    "numero": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "cheque/transferencia": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "doc_ref": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "centro_costos": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "descripcion_registro_contable": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "tercero": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios."
+    },
+
+    "identificacion_tercero": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas"
+    },
+
+    "codigo_contable": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo con la estructura NIIF vigente para el año reportado"
+    },
+
+    "descripcion_codigo_contable": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Nombre establecido de acuerdo con el NIIF para el año reportado"
+    },
+
+    "debitos": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "creditos": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "macro_campo_nivel_agregado": {
+      "tipo": "String",
+      "valid": ["A", "DA"],
+      "message": "Sin símbolos solo letras A si es agregado (suma de rubros) o DA si es desagregado y es el ultimo nivel (no hay niveles inferiores)."
+    }
+  },
+
+  "libroMayor": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "codigo_contable": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo con la estructura NIIF vigente para el año reportado"
+    },
+
+    "descripcion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Nombre establecido de acuerdo con el NIIF para el año reportado"
+    },
+
+    "saldo_db_anterior": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "saldo_cr_anterior": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "movimiento_db_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "movimiento_cr_periodo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+    "saldo_final_db": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+    "saldo_final_cr": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    }
+  },
+
+  "estadoFinanciero": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "codigo_contable": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo con la estructura NIIF vigente para el año reportado"
+    },
+
+    "descripcion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Nombre establecido de acuerdo con el NIIF para el año reportado"
+    },
+
+    "saldo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    }
+  },
+  "programasProyectos": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+    "codigo_banco_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite números separados con guiones de acuerdo con el formato establecido y asignado al proyecto"
+    },
+
+    "nombre_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "valor_proyecto": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "duracion_proyecto": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales. (Dias)"
+    },
+
+    "dependencia_responsable_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "descripcion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "objetivo_general_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Texto, letras, números, espacios, puntos y comas."
+    },
+
+    "sector": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo letras y espacios. Sin otros signos."
+    },
+
+    "programa_plan_desarrollo_municipal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Texto, letras, números, espacios, puntos y comas."
+    },
+
+    "fecha_inicio_ejecucion_proyecto": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "fecha_cierre_ejecucion_proyecto": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "observaciones": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Texto, letras, números, espacios, puntos y comas."
+    },
+
+    "proviene_de_recurso_de_reactivacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["SI", "NO"],
+      "message": "Solo puede colocar SI o NO"
+    }
+  },
+
+  "contratacion": {
+    "anio": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": ["2018", "2019", "2020", "2021", "2022"],
+      "message": "Sin separadadores de miles ni símbolos"
+    },
+    "nit_entidad": {
+      "tipo": "Number",
+      "coma": false,
+      "nit": true,
+      "valid": 0,
+      "message": "Número entero sin símbolos, sin dígito de verificación"
+    },
+    "nombre_entidad": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "numero_del_contrato": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite letras, números, espacios y guión. No se admite signos diferentes a -"
+    },
+
+    "codigo_banco_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite números separados con guiones de acuerdo con el formato establecido y asignado al proyecto"
+    },
+
+    "linea_o_estrategia_desarrollada": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "fuente_de_recurso": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "objeto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+
+    "clase_de_contrato": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "valor_del_contrato": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "nombre_del_contratista": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "identificacion_del_contratista": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas"
+    },
+
+    "direccion_domicilio_principal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+
+    "telefono_de_contacto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+
+    "correo_electronico": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+    "entidad_bancaria": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+
+    "tipo_cuenta_bancaria": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+    "no_cuenta_bancaria": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Se admite cualquier tipo de carácter de texto"
+    },
+
+    "no_disponibilidad_presupuestal": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al establecido por la entidad, especificar su estructura."
+    },
+
+    "fecha_disponibilidad": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "valor_disponibilidad": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "fecha_firma_contrato": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "forma_de_contratacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "fecha_registro_presupuestal": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "valor_registro_presupuestal": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "cod_rubro_registro_presupuestal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Adjuntar descripción detallada de la notación de codigo utilizado"
+    },
+
+    "fuente_financiacion_registro_presupuestal": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "De acuerdo al catalogo vigente"
+    },
+
+    "asignado_supervisor_o_interventor": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["N", "S"],
+      "message": "Solo uno de los siguientes valores: S o N"
+    },
+
+    "identificacion_interventor_o_supervisor": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin dígito de verificación y sin puntos o comas. Valor 0 en caso de no tener supervisor o interventor contratado."
+    },
+
+    "nombre_completo_del_interventor": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios. N/A en caso de no tener supervisor o interventor contratado."
+    },
+
+    "tipo_vinculacion_interventor_o_supervisor": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios. N/A en caso de no tener supervisor o interventor contratado."
+    },
+
+    "fecha_aprobacion_garantia_unica": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "fecha_iniciacion_contrato": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "plazo_contrato": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "unidad_ejecucion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "anticipo_al_contrato": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["N", "S"],
+      "message": "Solo uno de los siguientes valores: S o N"
+    },
+
+    "valor_pagado_anticipo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "fecha_pago_anticipo": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "numero_adiciones": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "valor_total_adiciones": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "numero_prorrogas": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "tiempo_prorrogas": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "numero_suspensiones": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "tiempo_suspensiones": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "valor_total_pagos": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+    "fecha_terminacion_contrato": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "fecha_acta_liquidacion": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "estado_contrato": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "observaciones": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Sin símbolos solo letras y espacios"
+    },
+
+    "proviene_de_recurso_de_reactivacion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["SI", "NO"],
+      "message": "Solo puede colocar SI o NO"
+    }
+  },
+  "obras": {
+    "id_bpin": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo puede contener números, texto y caracteres especiales."
+    },
+
+    "id": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo es libre para la entidad"
+    },
+    "sector": {
+      "tipo": "String",
+      "coma": false,
+      "valid": [
+        "INFRAESTRUCTURA",
+        "VIVIENDA",
+        "EDUCACION",
+        "TRANSPORTE",
+        "SALUD",
+        "MITIGACION DE RIESGO",
+        "AGUA POTABLE Y SANEAMIENTO BASICO",
+        "CARCELARIO",
+        "DEPORTIVO",
+        "JUSTICIA",
+        "MINAS Y ENERGIA",
+        "OTRO"
+      ],
+      "message": "Debe contener alguno de estas opciones: (VIVIENDA, SALUD, EDUCACION, TRANSPORTE, AGUA POTABLE Y SANEAMIENTO BASICO, CARCELARIO, DEPORTIVO, JUSTICIA, OTRO)"
+    },
+
+    "municipio_obra": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Municipio donde se encuentra la obra, no debe contener símbolos"
+    },
+
+    "departamento_obra": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Departamento donde se encuentra la obra, no debe contener símbolos"
+    },
+
+    "codigo_divipola_municipio": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Formato texto y extensión minima 5 dígitos consultar https://www.datos.gov.co/widgets/gdxc-w37w"
+    },
+
+    "nombre_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos"
+    },
+
+    "objeto_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos"
+    },
+
+    "unidad_funcional_acuerdo_obra": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Cadena de texto solo símbolos (,+,-)"
+    },
+
+    "fecha_inicio": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+    "fecha_inicial_terminacion": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+    "fecha_final_terminacion": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "valor_contrato_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "valor_contrato_final": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "avance_fisico_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores decimales entre 0 y 1 sin punto solo coma ',' un valor valido sería 0,88"
+    },
+
+    "avance_fisico_ejecutado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores decimales entre 0 y 1 sin punto solo coma ',' un valor valido sería 0,88"
+    },
+
+    "avance_financiero_ejecutado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores decimales entre 0 y 1 sin punto solo coma ',' un valor valido sería 0,88"
+    },
+
+    "num_contrato": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "Cadena de texto solo símbolos (,+,-)"
+    },
+
+    "cantidad_de_suspensiones": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "cantidad_de_prorrogas": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    },
+
+    "tiempo_suspensiones": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "CANTIDAD DE DIAS SUSPENSIONES"
+    },
+
+    "tiempo_prorrogas": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "CANTIDAD DE DIAS SUSPENSIONES"
+    },
+
+    "cantidad_adiciones": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Cantidad acumulada de adiciones del proyecto sin símbolos, caracteres, solo numeros"
+    },
+    "valor_total_adiciones": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valor en pesos,unico separador ,(coma) para centavos"
+    },
+
+    "origen_recursos": {
+      "tipo": "String",
+      "coma": false,
+      "valid": [
+        "PGN",
+        "SGR",
+        "SGP",
+        "PROPIOS",
+        "OTRO",
+        "MIXTO (PNG Y SGR)",
+        "MIXTO (PNG Y SGP)",
+        "MIXTO (SGP Y SGR)",
+        "MIXTO (PNG Y PROPIO)",
+        "MIXTO (SGR Y PROPIO)",
+        "MIXTO (SGP Y PROPIO)"
+      ],
+      "message": "Cadena de texto solo símbolos (,+,-)"
+    },
+
+    "valor_comprometido": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valor en pesos,unico separador ,(coma) para centavos"
+    },
+
+    "valor_obligado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valor en pesos,unico separador ,(coma) para centavos"
+    },
+
+    "valor_pagado": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valor en pesos,unico separador ,(coma) para centavos"
+    },
+
+    "valor_anticipo": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valor en pesos,unico separador ,(coma) para centavos"
+    },
+
+    "latitud": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "unico separador ,(coma) (Grados Decimales)"
+    },
+
+    "longitud": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "unico separador ,(coma) (Grados Decimales)"
+    },
+
+    "latitud_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "unico separador ,(coma) (Grados Decimales)"
+    },
+
+    "latitud_final": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "unico separador ,(coma) (Grados Decimales)"
+    },
+
+    "longitud_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "unico separador ,(coma) (Grados Decimales)"
+    },
+
+    "longitud_final": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "unico separador ,(coma) (Grados Decimales)"
+    },
+
+    "estado": {
+      "tipo": "String",
+      "coma": false,
+      "valid": [
+        "POR INICIAR",
+        "ENTREGADO",
+        "EN EJECUCION",
+        "SUSPENDIDO",
+        "LIQUIDADO",
+        "EN REASIGNACION",
+        "TERMINADO",
+        "EN PROCESO DE INCUMPLIMIENTO",
+        "EN CESION",
+        "VENCIDO",
+        "ADJUDICADO"
+      ],
+      "message": "El campo debe estar diligenciar con las siguientes opciones:(POR INICIAR,EN EJECUCION, SUSPENDIDO, LIQUIDADO, TERMINADO,EN CESION,EN REASIGNACION, EN PROCESO DE INCUMPLIMIENTO, VENCIDO)"
+    },
+
+    "nombre_contratista": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos."
+    },
+    "nit_contratista": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Debe contener solo números, no debe contener símbolos ni dígito de verificación"
+    },
+
+    "cesion": {
+      "tipo": "String",
+      "coma": false,
+      "valid": ["SI", "NO"],
+      "message": "El campo debe estar diligenciar con las siguientes opciones:(SI, NO)"
+    },
+
+    "nuevo_contratista": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos."
+    },
+
+    "observaciones": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos."
+    },
+
+    "link_secop": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "DEBE SER UNA URL válida"
+    }
+  },
+
+  "obrasadicionales": {
+    "id_bpin": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo puede contener números, texto y caracteres especiales."
+    },
+
+    "nombre_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos"
+    },
+    "unidad_funcional_acuerdo_obra": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo puede contener números, texto y caracteres especiales"
+    },
+
+    "num_contrato": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo puede contener números, texto y caracteres especiales"
+    },
+
+    "latitud": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Formato entre -4 y 14 coordenadas geográficas territorio colombiano *Formato GRADOS DECIMALES *Tener en cuenta las estructuras geográficas WGS84"
+    },
+
+    "longitud": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Formato entre -65 y -81 coordenadas geográficas territorio colombiano *Formato GRADOS DECIMALES *Tener en cuenta las estructuras geográficas WGS84"
+    },
+
+    "latitud_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Formato entre -4 y 14 coordenadas geográficas territorio colombiano *Formato GRADOS DECIMALES *Tener en cuenta las estructuras geográficas WGS84"
+    },
+
+    "latitud_final": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Formato entre -4 y 14 coordenadas geográficas territorio colombiano *Formato GRADOS DECIMALES *Tener en cuenta las estructuras geográficas WGS84"
+    },
+
+    "longitud_inicial": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Formato entre -65 y -81 coordenadas geográficas territorio colombiano *Formato GRADOS DECIMALES *Tener en cuenta las estructuras geográficas WGS84"
+    },
+
+    "longitud_final": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Formato entre -65 y -81 coordenadas geográficas territorio colombiano *Formato GRADOS DECIMALES *Tener en cuenta las estructuras geográficas WGS84"
+    }
+  },
+  "obrashitos": {
+    "id": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo es libre para la entidad"
+    },
+
+    "id_bpin": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo puede contener números, texto y caracteres especiales."
+    },
+
+    "nombre_proyecto": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "No debe contener símbolos"
+    },
+
+    "hito": {
+      "tipo": "String",
+      "coma": false,
+      "valid": [
+        "FIRMA CONTRATO",
+        "INICIO OBRA",
+        "ADICION",
+        "PRORROGA",
+        "SUSPENSION",
+        "CESION",
+        "OTROSI",
+        "OTRO"
+      ],
+      "message": "Rellenar campo con las siguientes opciones: FIRMA CONTRATO, INICIO OBRA, ADICION, PRORROGA, SUSPENSION, CESION, OTROSI, OTRO"
+    },
+    "fecha_hito": {
+      "tipo": "Date",
+      "coma": false,
+      "valid": 0,
+      "message": "(yyyy-MM-dd) una fecha válida sería 2021-01-09"
+    },
+
+    "detalle_hito": {
+      "tipo": "String",
+      "coma": false,
+      "valid": 0,
+      "message": "El campo puede contener números, texto y caracteres especiales"
+    },
+
+    "valor_adiciones_hito": {
+      "tipo": "Number",
+      "coma": true,
+      "valid": 0,
+      "message": "Valores enteros más centavos separados por comas, sin separador de miles, ni puntos u otros símbolos."
+    },
+
+    "dias_hito": {
+      "tipo": "Number",
+      "coma": false,
+      "valid": 0,
+      "message": "Solo números enteros sin puntos, comas o decimales"
+    }
+  }
+}

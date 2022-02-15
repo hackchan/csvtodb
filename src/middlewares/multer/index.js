@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from 'uuid'
 import path from 'path'
 
 const storage = multer.diskStorage({
-  destination: 'public/uploads/',
+  destination: function (req, file, callback) {
+    callback(null, 'public/uploads')
+  },
   filename: (req, file, cb) => {
     const filename =
       uuidv4() +
@@ -17,17 +19,16 @@ const upload = multer({
   storage,
   dest: 'public/uploads/',
   limits: { fileSize: 25 * 1024 * 1024 },
-  fileFilter: async function (req, file, cb) {
+  fileFilter: function (req, file, cb) {
     const ext = path.extname(file.originalname)
     if (ext !== '.csv') {
-      console.log(' f i l e N a m e:', file)
-      cb(new Error('Solo se permite archivos csv'), null)
+      return cb(
+        new Error('Solo se permite archivos csv'),
+        null
+      )
     }
     cb(null, true)
-  },
-  onError: function (err, next) {
-    next(err)
   }
-})
+}).single('file')
 
 export default upload

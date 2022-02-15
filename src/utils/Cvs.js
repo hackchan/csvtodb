@@ -1,3 +1,4 @@
+/* eslint-disable no-async-promise-executor */
 import csvtojson from 'csvtojson'
 import path from 'path'
 import fs from 'fs'
@@ -42,7 +43,7 @@ class Csv {
           })
           .fromStream(readStream)
           .subscribe(
-            (json, lineNumber) => {
+            (json) => {
               dataJON.push(json)
             },
             (err) => {
