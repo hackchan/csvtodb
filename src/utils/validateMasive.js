@@ -291,9 +291,10 @@ export const findNoExistComas = (
   numeroFila,
   nombreColuma,
   campo,
-  regla
+  regla,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       const tot = campo.split(',').length
       if (tot > 1) {
@@ -307,7 +308,8 @@ export const findNoExistComas = (
 
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -316,9 +318,10 @@ export const validFormatDate = (
   numeroFila,
   nombreColuma,
   campo,
-  regla
+  regla,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (
         !moment(
@@ -336,7 +339,8 @@ export const validFormatDate = (
 
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -345,9 +349,10 @@ export const validFormatDate = (
 export const validExponencial = (
   numeroFila,
   nombreColuma,
-  campo
+  campo,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (/.*\d*(\.|,)?\d+e[+]+\d.*/gim.test(campo)) {
         throw new Error(
@@ -359,7 +364,8 @@ export const validExponencial = (
 
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -367,9 +373,10 @@ export const validExponencial = (
 export const validStringNoEmpty = (
   numeroFila,
   nombreColuma,
-  campo
+  campo,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (!campo || campo.length === 0) {
         throw new Error(
@@ -380,7 +387,8 @@ export const validStringNoEmpty = (
       }
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -388,9 +396,10 @@ export const validStringNoEmpty = (
 export const validStringNA = (
   numeroFila,
   nombreColuma,
-  campo
+  campo,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (
         !campo ||
@@ -408,7 +417,8 @@ export const validStringNA = (
       }
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -416,9 +426,10 @@ export const validStringNA = (
 export const validIsNumber = (
   numeroFila,
   nombreColuma,
-  campo
+  campo,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (!/^[0-9]+$/.test(campo)) {
         throw new Error(
@@ -430,7 +441,8 @@ export const validIsNumber = (
 
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -438,9 +450,10 @@ export const validIsNumber = (
 export const validIsNit = (
   numeroFila,
   nombreColuma,
-  campo
+  campo,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (!/^[0-9]{9,9}$/.test(campo)) {
         throw new Error(
@@ -452,7 +465,8 @@ export const validIsNit = (
 
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -461,9 +475,10 @@ export const isValidData = (
   numeroFila,
   nombreColuma,
   campo,
-  regla
+  regla,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       if (regla.valid != 0 && Array.isArray(regla.valid)) {
         if (!regla.valid.includes(campo)) {
@@ -482,7 +497,8 @@ export const isValidData = (
       }
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -491,9 +507,10 @@ export const findSeparadorComa = (
   numeroFila,
   nombreColuma,
   campo,
-  regla
+  regla,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       const tot = campo.split(',').length
       if (tot > 2) {
@@ -504,7 +521,8 @@ export const findSeparadorComa = (
 
       resolve(Number(campo.replace(/,/g, '.')))
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -513,9 +531,10 @@ export const findSeparadorPunto = (
   numeroFila,
   nombreColuma,
   campo,
-  regla
+  regla,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       const tot = campo.split('.').length
       if (tot > 1) {
@@ -528,7 +547,8 @@ export const findSeparadorPunto = (
       }
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -536,9 +556,10 @@ export const findSeparadorPunto = (
 export const validIsValidNumber = (
   numeroFila,
   nombreColumna,
-  campo
+  campo,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       //if (/^[a-zA-Z\/@$?¡\-_]+$/.test(campo)) {
 
@@ -552,7 +573,8 @@ export const validIsValidNumber = (
 
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }
@@ -561,9 +583,10 @@ export const validCampoIsNotNull = (
   numeroFila,
   nombreColuma,
   campo,
-  regla
+  regla,
+  listaErrores
 ) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     try {
       const tot = campo.length
       if (tot <= 0) {
@@ -576,7 +599,8 @@ export const validCampoIsNotNull = (
       }
       resolve(true)
     } catch (error) {
-      reject(error)
+      listaErrores.add(error.message)
+      resolve(true)
     }
   })
 }

@@ -8,20 +8,26 @@ export const loadCsv = async (req, res, next) => {
     const serviceFile = new File()
     const serviceDictionary = new DictionaryValidate()
     const fileEntidad = req.file
+
     const jsonData = await serviceCsv.csvtojson({
       file: fileEntidad.filename
     })
     await serviceFile.deleteFile({
       file: fileEntidad.filename
     })
-    const dicciFile =
+    const dicciSelection =
       await serviceDictionary.detectarDiccionario(jsonData)
-    console.log('diccionario sel:', dicciFile)
+    await serviceDictionary.validarInformacion(
+      jsonData,
+      dicciSelection
+    )
+    //console.log('diccionario sel:', dicciFile)
     // console.log('req:', req)
     // console.log('fileEntidad:', fileEntidad)
     // console.log('json:', jsonData)
     success(req, res, { test: 'load csv file test' }, 200)
   } catch (error) {
+    console.log('error???', error)
     next(error)
   }
 }
