@@ -7,22 +7,22 @@ const {
   userSchema,
   tableName: tableNameUser
 } = require('../models/User')
-// const {
-//   SatelitalSchema,
-//   tableName: tableNameSatelital
-// } = require('../models/Satelital')
-// const {
-//   DepartmentSchema,
-//   tableName: tableNameDepartment
-// } = require('../models/Deparments')
-// const {
-//   tipoEntidadSchema,
-//   tableName: tentidad
-// } = require('../models/TipoEntidad')
-// const {
-//   entidadSchema,
-//   tableName: tableNameEntidad
-// } = require('../models/Entidad')
+const {
+  SatelitalSchema,
+  tableName: tableNameSatelital
+} = require('../models/Satelital')
+const {
+  DepartmentSchema,
+  tableName: tableNameDepartment
+} = require('../models/Deparments')
+const {
+  tipoEntidadSchema,
+  tableName: tentidad
+} = require('../models/TipoEntidad')
+const {
+  entidadSchema,
+  tableName: tableNameEntidad
+} = require('../models/Entidad')
 
 module.exports = {
   up: async (queryInterface) => {
@@ -34,26 +34,31 @@ module.exports = {
       tableNameUser,
       userSchema
     )
+    await queryInterface.createTable(
+      tableNameSatelital,
+      SatelitalSchema
+    )
+    await queryInterface.createTable(
+      tableNameDepartment,
+      DepartmentSchema
+    )
+    await queryInterface.createTable(
+      tentidad,
+      tipoEntidadSchema
+    )
+    await queryInterface.createTable(
+      tableNameEntidad,
+      entidadSchema
+    )
   },
 
   down: async (queryInterface) => {
-    await queryInterface.droptable(
-      tableNameAuth,
-      authSchema
-    )
-    await queryInterface.dropTable(
-      tableNameUser,
-      userSchema
-    )
-    // await queryInterface.dropTable(tableNameSatelital)
+    // await queryInterface.dropTable(tableNameEntidad)
+    // await queryInterface.dropTable(tipoEntidadSchema)
     // await queryInterface.dropTable(tableNameDepartment)
-    // await queryInterface.dropTable(
-    //   tentidad,
-    //   tipoEntidadSchema
-    // )
-    // await queryInterface.dropTable(
-    //   tableNameEntidad,
-    //   entidadSchema
-    // )
+    // await queryInterface.dropTable(tableNameSatelital)
+    // await queryInterface.dropTable(tableNameUser)
+    // await queryInterface.dropTable(tableNameAuth)
+    await queryInterface.dropAllTables()
   }
 }
