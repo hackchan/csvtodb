@@ -58,7 +58,7 @@ export const userSchema = {
 export class User extends Model {
   static associate(models) {
     this.belongsTo(models.Auth, { as: 'auth' })
-    this.hasOne(models.Department, { foreignKey: 'userId' })
+    //this.hasOne(models.Department, { foreignKey: 'userId' })
   }
 
   static config(sequelize) {

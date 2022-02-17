@@ -1,6 +1,6 @@
 # CSVTODB
 
-CSVTODB es un programa volcar arhivos csv a una base de datos
+CSVTODB es un programa para estructurar arhivos csv a una base de datos.
 
 ## Comenzando 🚀
 

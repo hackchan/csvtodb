@@ -29,8 +29,14 @@ export const authSchema = {
 
 export class Auth extends Model {
   static associate(models) {
-    this.hasOne(models.User, { foreignKey: 'authId', as: 'user' })
-    this.hasOne(models.Entidad, { foreignKey: 'authId', as: 'entidad' })
+    this.hasOne(models.User, {
+      foreignKey: 'authId',
+      as: 'user'
+    })
+    // this.hasOne(models.Entidad, {
+    //   foreignKey: 'authId',
+    //   as: 'entidad'
+    // })
   }
 
   static config(sequelize) {
