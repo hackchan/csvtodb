@@ -2,7 +2,8 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 export default {
-  dev: process.env.NODE_ENV === 'developmnet' ? true : false,
+  dev:
+    process.env.NODE_ENV === 'development' ? true : false,
   port: process.env.NODE_PORT || 3000,
   db: {
     user: process.env.DB_USER,
