@@ -1,5 +1,8 @@
 import { DataTypes, Model } from 'sequelize'
-import { tableName as tableNameAuth } from './Auth'
+import {
+  tableName as tableNameAuth,
+  authSchema
+} from './Auth'
 export const tableName = 'users'
 
 export const userSchema = {
@@ -7,7 +10,8 @@ export const userSchema = {
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
-    type: DataTypes.INTEGER
+    unique: true,
+    type: DataTypes.BIGINT
   },
 
   name: {
@@ -16,6 +20,7 @@ export const userSchema = {
   },
 
   lastName: {
+    field: 'last_name',
     allowNull: false,
     type: DataTypes.STRING
   },
@@ -37,6 +42,7 @@ export const userSchema = {
   },
 
   createdAt: {
+    field: 'created_at',
     allowNull: false,
     type: DataTypes.DATE
   },
@@ -45,7 +51,7 @@ export const userSchema = {
     field: 'auth_id',
     allowNull: false,
     unique: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.BIGINT,
     references: {
       model: tableNameAuth,
       key: 'id'
@@ -57,8 +63,10 @@ export const userSchema = {
 
 export class User extends Model {
   static associate(models) {
-    this.belongsTo(models.Auth, { as: 'auth' })
-    this.hasOne(models.Department, { foreignKey: 'userId' })
+    this.belongsTo(models.Auth, {
+      as: 'auth'
+    })
+    //this.hasOne(models.Department, { foreignKey: 'userId' })
   }
 
   static config(sequelize) {

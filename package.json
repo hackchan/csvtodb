@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "migrations:generate": "sequelize-cli migration:generate --name",
-    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:run": "sequelize-cli db:migrate --debug",
     "migrations:revert": "sequelize-cli db:migrate:undo",
     "migrations:delete": "sequelize-cli db:migrate:undo:all",
     "seed:generate": "sequelize-cli seed:generate --name",
-    "seed:run": "sequelize-cli db:seed:all",
+    "seed:run": "sequelize-cli db:seed:all --debug",
     "dev": "nodemon src/index --exec babel-node",
     "build": "babel src -d dist",
     "start": "node dist"
@@ -35,7 +35,6 @@
     "joi": "^17.6.0",
     "moment": "^2.29.1",
     "morgan": "^1.10.0",
-    "mssql": "^8.0.2",
     "multer": "^1.4.4",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",

@@ -7,7 +7,8 @@ export const authSchema = {
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
-    type: DataTypes.INTEGER
+    unique: true,
+    type: DataTypes.BIGINT
   },
 
   username: {
@@ -29,8 +30,7 @@ export const authSchema = {
 
 export class Auth extends Model {
   static associate(models) {
-    this.hasOne(models.User, { foreignKey: 'authId', as: 'user' })
-    this.hasOne(models.Entidad, { foreignKey: 'authId', as: 'entidad' })
+    this.hasOne(models.Entidad, { foreignKey: 'authId' })
   }
 
   static config(sequelize) {

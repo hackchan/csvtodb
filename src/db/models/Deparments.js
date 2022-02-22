@@ -12,7 +12,13 @@ export const DepartmentSchema = {
   name: {
     allowNull: false,
     unique: true,
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    validate: {
+      notNull: {
+        notNull: 'department must have a name',
+        notEmpty: 'department must not be empty'
+      }
+    }
   },
 
   latitude: {

@@ -1,11 +1,10 @@
 import { DataTypes, Model } from 'sequelize'
 
-export const tableName = 'circular'
+export const tableName = 'circulares'
 
 export const circularSchema = {
   id: {
     type: DataTypes.INTEGER,
-    field: 'id_circular',
     allowNull: false,
     primaryKey: true,
     autoIncrement: true
@@ -16,19 +15,23 @@ export const circularSchema = {
     type: DataTypes.STRING
   },
 
-  descripcion: {
+  description: {
     allowNull: false,
     type: DataTypes.STRING
   }
 }
 
 export class Circular extends Model {
-  // static associate(models) {}
+  static associate(models) {
+    this.hasMany(models.EjecucionIngreso, {
+      foreignKey: 'circularId'
+    })
+  }
 
   static config(sequelize) {
     return {
       sequelize,
-      modelName: 'circular',
+      modelName: 'Circular',
       tableName,
       timestamps: false
     }

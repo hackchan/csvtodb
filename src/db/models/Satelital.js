@@ -29,7 +29,9 @@ export const SatelitalSchema = {
 
 export class Satelital extends Model {
   static associate(models) {
-    this.hasMany(models.Department, { foreignKey: 'satelitalId', as: 'departmets' })
+    this.hasMany(models.Department, {
+      foreignKey: 'satelitalId'
+    })
   }
 
   static config(sequelize) {
